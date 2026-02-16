@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Contact form handling ---
+    // --- Contact form handling (Netlify Forms) ---
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
@@ -61,12 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action, {
+
+                const response = await fetch('/', {
                     method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
                 });
 
                 if (response.ok) {
