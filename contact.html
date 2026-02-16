@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ortech Talent</title>
+    <meta name="description" content="Get in touch with Ortech Talent for IT staffing and recruiting solutions. We'd love to hear from you.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/ortech-logo.png" alt="Ortech Talent">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn btn-nav active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-bg-grid"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag">Get in Touch</span>
+                <h1>Contact <span class="text-gradient">Us</span></h1>
+                <p>Ready to find the right IT talent? Have questions about our services? We're here to help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within one business day.</p>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiryType">I'm interested in... <span class="required">*</span></label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="hiring">Hiring IT Talent</option>
+                                <option value="job-seeking">Looking for a Job</option>
+                                <option value="staffing">IT Staffing & Placement</option>
+                                <option value="consulting">IT Consulting & Project Support</option>
+                                <option value="development">Team Development & Executive Coaching</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your staffing needs or how we can help..."></textarea>
+                        </div>
+                        <!-- Honeypot for spam prevention -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Ortech Talent">
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                            Send Message
+                        </button>
+                    </form>
+                    <div class="form-status" id="formStatus"></div>
+                </div>
+
+                <!-- Contact Info Sidebar -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@ortechtalent.com</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                            <a href="#" aria-label="Twitter">Twitter</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-accent">
+                        <h3>Looking for a Job?</h3>
+                        <p>We're always connecting talented IT professionals with exciting opportunities. Select "Looking for a Job" in the form and tell us about your experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&#9670;</span> Ortech<span class="logo-accent">Talent</span>
+                    </a>
+                    <p>Connecting top IT talent with innovative companies. Your trusted partner in technology staffing and recruiting.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#staffing">IT Staffing & Placement</a></li>
+                        <li><a href="services.html#consulting">IT Consulting</a></li>
+                        <li><a href="services.html#development">Team Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>info@ortechtalent.com</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ortech Talent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
