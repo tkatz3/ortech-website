@@ -46,43 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Contact form handling (Netlify Forms) ---
-    const contactForm = document.getElementById('contactForm');
+    // Show success message if redirected back after submission
+    const urlParams = new URLSearchParams(window.location.search);
     const formStatus = document.getElementById('formStatus');
-    const submitBtn = document.getElementById('submitBtn');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+    if (urlParams.get('success') === 'true' && formStatus) {
+        formStatus.textContent = 'Message sent successfully! We\'ll be in touch soon.';
+        formStatus.className = 'form-status success';
+        formStatus.style.display = 'block';
 
-            // Update button state
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            try {
-                const formData = new FormData(contactForm);
-
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString()
-                });
-
-                if (response.ok) {
-                    formStatus.textContent = 'Message sent successfully! We\'ll be in touch soon.';
-                    formStatus.className = 'form-status success';
-                    contactForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                formStatus.textContent = 'Something went wrong. Please try again or email us directly.';
-                formStatus.className = 'form-status error';
-            }
-
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        });
+        // Clear the URL parameter
+        window.history.replaceState({}, document.title, window.location.pathname);
     }
 
     // --- Smooth scroll for anchor links ---
