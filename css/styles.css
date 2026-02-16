@@ -1101,10 +1101,8 @@ h3 { font-size: 1.25rem; }
 
 /* --- Contact Page --- */
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 64px;
-    align-items: start;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .contact-form-wrapper h2 {
@@ -1378,15 +1376,6 @@ h3 { font-size: 1.25rem; }
 
     .sidebar-card {
         position: static;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-grid {
