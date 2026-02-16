@@ -313,6 +313,7 @@ h3 { font-size: 1.25rem; }
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 70%);
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 70%);
+    pointer-events: none;
 }
 
 .hero-container {
